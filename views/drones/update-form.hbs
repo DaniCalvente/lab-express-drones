@@ -1,21 +1,24 @@
-<h2>Update the drone</h2>
+<h2>Actualizar dron</h2>
 
 <form method="POST" action="">
 
-<label for="name">Nombre</label>
-<input type="text" name="name" value="{{oneDroneId.name}}">
+<label for="name" class="col-form-label">Nombre</label>
+<input type="text" name="name" value="{{oneDroneId.name}}" class="form-control">
 
 <br>
 
-<label for="propellers">Helices</label>
-<input type="number" name="propellers" value="{{oneDroneId.propellers}}">
+<label for="propellers" class="col-form-label">Helices</label>
+<input type="number" name="propellers" value="{{oneDroneId.propellers}}" class="form-control">
 
 <br>
 
-<label for="maxSpeed">Velocidad maxima</label>
-<input type="number" name="maxSpeed" value="{{oneDroneId.maxSpeed}}">
+<label for="maxSpeed" class="col-form-label">Velocidad maxima</label>
+<input type="number" name="maxSpeed" value="{{oneDroneId.maxSpeed}}" class="form-control">
 
 <br>
 
-<button>Actualizar dron</button>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Actualizar dron</button>
+</div>
+
 </form>

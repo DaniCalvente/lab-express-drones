@@ -1,21 +1,27 @@
-<h2>Create a new drone</h2>
+<h2>Crear un nuevo dron</h2>
 
 <form method="POST" action="/drones/create">
 
-<label for="name">Nombre</label>
-<input type="text" name="name">
+<div class="row g-3 align-items-center">
+
+</div>
+<label for="name" class="col-form-label">Nombre</label>
+<input type="text" name="name" class="form-control">
 
 <br>
 
-<label for="propellers">Helices</label>
-<input type="number" name="propellers">
+<label for="propellers" class="col-form-label">Helices</label>
+<input type="number" name="propellers" class="form-control">
 
 <br>
 
-<label for="maxSpeed">Velocidad maxima</label>
-<input type="number" name="maxSpeed">
+<label for="maxSpeed" class="col-form-label">Velocidad maxima</label>
+<input type="number" name="maxSpeed" class="form-control">
 
 <br>
 
-<button>Agrega nuevo dron</button>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Agrega nuevo dron</button>
+</div>
+
 </form>
