@@ -2,20 +2,29 @@
 
 {{#each allDrones}}
 
-<ul>
-<li>
-<h6>{{this.name}}</h6>
-<br>
-Helices: {{this.propellers}}
-<br>
-Velocidad máxima: {{this.maxSpeed}}  
-</li>
-<br>
-<button class="btn btn-success"><a href="/drones/{{this._id}}/edit">Detalles</a></button>
+  <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 bd-highlight">
+      <ul>
+        <li>
+          <h6>{{this.name}}</h6>
+          <br />
+          Helices:
+          {{this.propellers}}
+          <br />
+          Velocidad máxima:
+          {{this.maxSpeed}}
+        </li>
+      </ul>
+    </div>
+    <div class="p-2 bd-highlight col-6 mx-auto">
+      <button class="btn btn-success"><a
+          href="/drones/{{this._id}}/edit"
+        >Detalles</a></button>
 
-<form method="POST" action="/drones/{{this.id}}/delete">
-    <button class="btn btn-danger">Eliminar dron</button>
-</form>
-</ul>   
+      <form method="POST" action="/drones/{{this.id}}/delete">
+        <button class="btn btn-danger">Eliminar dron</button>
+      </form>
+    </div>
+  </div>
 
 {{/each}}
