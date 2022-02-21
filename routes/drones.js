@@ -71,9 +71,19 @@ router.post('/drones/:id/edit', (req, res, next) => {
   })
 });
 
-router.post('/drones/:id/delete', (req, res, next) => {
-  // Iteration #5: Delete the drone
-  // ... your code here
-});
+router.post('/drones/:id/delete', async (req, res, next) => {
+  try {
+  const {id} = req.params
+  console.log(id)
+  await DronModel.findByIdAndDelete(id)
+    
+    res.redirect("/drones")
+  }
+  catch (err) {
+    next(err)
+  }
+
+
+})
 
 module.exports = router;
