@@ -21,11 +21,26 @@ router.get('/drones', (req, res, next) => {
 router.get('/drones/create', (req, res, next) => {
   // Iteration #3: Add a new drone
   // ... your code here
+  res.render("drones/create-form.hbs")
 });
 
 router.post('/drones/create', (req, res, next) => {
   // Iteration #3: Add a new drone
   // ... your code here
+  DronModel.create({
+    name: req.body.name,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  })
+  .then ((createDron) => {
+    res.redirect(`/drones`)
+
+  })
+  .catch ((err) => {
+    res.render("drones/create-form.hbs")
+    next(err)
+  })
+
 });
 
 router.get('/drones/:id/edit', (req, res, next) => {
